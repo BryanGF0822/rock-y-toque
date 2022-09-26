@@ -44,7 +44,17 @@
     </div>
 </template>
 
-<style>
+<script>
+export default {
+    name: 'Carousel',
+    components: {
+        
+    }
+}
+</script>
+
+
+<style lang="scss">
 
 </style>
   

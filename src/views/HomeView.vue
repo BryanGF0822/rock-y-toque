@@ -2,13 +2,17 @@
   <div>
     <Carousel />
   </div>
+  <div>
+    <CardGroup/>
+  </div>
 </template>
 
 <script>
 import Carousel from '../components/Carousel.vue'
+import CardGroup from '../components/CardGroup.vue'
 export default {
   components: {
-    Carousel
+    Carousel, CardGroup
   }
 }
 </script>
