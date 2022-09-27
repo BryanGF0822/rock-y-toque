@@ -17,7 +17,7 @@ export default {
 
     <nav class="navbar bg-light fixed-top">
       <div class="container-fluid">
-        <img src="../public/img/logo.png" alt="Logo" width="70" height="70" class="d-inline-block align-text-start">
+        <img src="../public/img/logo.png" alt="Logo" width="60" height="60" class="d-inline-block align-text-start">
         <a class="navbar-brand" href="#">Rock&Toque</a>
       
         <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
@@ -68,8 +68,6 @@ export default {
   </header>
 
   <RouterView />
-
-  <footer>Copyright</footer>
 </template>
 
 <style scoped lang="scss">
@@ -84,4 +82,5 @@ nav {
   display: flex;
   justify-content: space-around;
 }
+
 </style>
