@@ -9,7 +9,8 @@
     <CardGroup />
   </div>
   <div>
-    <Footer />
+    <Card/>
+    <Footer/>
   </div>
 </template>
 
@@ -17,6 +18,7 @@
 import Carousel from '../components/Carousel.vue'
 import CardGroup from '../components/CardGroup.vue'
 import Footer from '../components/Footer.vue'
+
 export default {
   components: {
     Carousel, CardGroup, Footer

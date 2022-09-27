@@ -6,7 +6,7 @@
     </div> -->
 
         <div class="separador">
-            <hr class="hr-text" />
+            <hr class="hr-text"/>
         </div>
 
         <footer class="footer-48201">
