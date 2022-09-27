@@ -47,14 +47,18 @@ export default {
                   Filter by
                 </a>
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Guitar</a></li>
+                  <li><a class="dropdown-item" href="#">Guitars</a></li>
                   <li><a class="dropdown-item" href="#">Studio</a></li>
-                  <li>
+                  <li><a class="dropdown-item" href="#">percussion</a></li>
+                  <li><a class="dropdown-item" href="#">Bass</a></li>
+                  <li><a class="dropdown-item" href="#">microphones</a></li>
+                  <!-- <li>
                     <hr class="dropdown-divider">
                   </li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li> -->
                 </ul>
               </li>
+              <hr>
             </ul>
             <form class="d-flex" role="search">
               <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">

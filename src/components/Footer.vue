@@ -1,23 +1,27 @@
 <template>
+
     <body>
         <!-- <div class="content d-flex align-items-center bg-light">
       <h2 class="w-100 text-center">Footer #7</h2>
     </div> -->
 
         <div class="separador">
-            <hr class="hr-text"/>
+            <hr class="hr-text" />
         </div>
 
         <footer class="footer-48201">
-
             <div class="container">
                 <div class="row">
                     <div class="col-md-4 pr-md-5">
                         <a href="#" class="footer-site-logo d-block mb-4">
-                            <img src="../../public/img/logo.png" width="150" height="150">
+                            <img src="../../public/img/logo.png" width="150" height="150" />
                             Rock&Toque
                         </a>
-                        <p>La música es el recuerdo que permanece. La música es el camino que te guía cuando estás sin rumbo. La música es la puerta a tu propio mundo.</p>
+                        <p>
+                            La música es el recuerdo que permanece. La música es el camino que
+                            te guía cuando estás sin rumbo. La música es la puerta a tu propio
+                            mundo.
+                        </p>
                     </div>
                     <div class="col-md">
                         <ul class="list-unstyled nav-links">
@@ -45,33 +49,32 @@
                     </div>
                 </div>
 
-                <div class="row ">
+                <div class="row">
                     <div class="col-12 text-center">
                         <div class="copyright mt-5 pt-5">
                             <p><small>Univesidad ICESI.</small></p>
-                            <p><small>Proyecto: Programacion Web Avanzada by Bryan Guapacha.</small></p>
+                            <p>
+                                <small>Proyecto: Programacion Web Avanzada by Bryan Guapacha.</small>
+                            </p>
                             <p><small>&copy; 2022 All Rights Reserved.</small></p>
                         </div>
                     </div>
                 </div>
             </div>
-
         </footer>
     </body>
 </template>
 
 <script>
 export default {
-    name: 'Footer',
-    components: {
-
-    }
-}
+    name: "Footer",
+    components: {},
+};
 </script>
 
 <style lang="scss">
 body {
-    font-family: 'Roboto';
+    font-family: "Roboto";
 }
 
 h1,
@@ -86,11 +89,11 @@ h6,
 .h4,
 .h5,
 .h6 {
-    font-family: 'Roboto';
+    font-family: "Roboto";
 }
 
 a {
-    transition: .3s all ease;
+    transition: 0.3s all ease;
 
     &,
     &:hover {
