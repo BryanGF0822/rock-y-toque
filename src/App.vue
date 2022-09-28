@@ -38,7 +38,7 @@ export default {
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">
-                  <RouterLink class="nav-link active" to="/about">About Us</RouterLink>
+                  <RouterLink class="nav-link active" to="/about">All products</RouterLink>
                 </a>
               </li>
               <li class="nav-item dropdown">
