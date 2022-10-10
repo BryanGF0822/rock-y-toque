@@ -1,28 +1,56 @@
 <template>
-    <div class="card mb-3" style="max-width: 540px;">
+    <div class="card mb-3" style="max-width: 540px;" v-for="instrument in allInstruments" :key="instrument.name" :to="`/instrument/${instrument.name}`">
         <div class="row g-0">
             <div class="col-md-4">
-                <img src="" class="img-fluid rounded-start" alt="...">
+                <img :src="instrument.image" class="img-fluid rounded-start" :alt="instrument.name">
             </div>
             <div class="col-md-8">
                 <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to
-                        additional content. This content is a little bit longer.</p>
-                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                    <a href="#" class="btn btn-primary">Ver más</a>
+                    <h5 class="card-title">{{instrument.name}}</h5>
+                    <p class="card-text">{{instrument.description}}</p>
+                    <p class="card-text"><small class="text-muted">{{"$" +  instrument.price}}</small></p>
+                    <a href="#" class="btn btn-primary">Show more</a>
                 </div>
             </div>
         </div>
     </div>
 </template>
-<script>
-export default {
-    components: {
 
+<script>
+import { mapStores } from "pinia";
+import { useInstrumentStore } from "../stores/instruments";
+
+export default {
+    props: {
+        instrument:{},
+    },
+    data() {
+        return {
+            image: "",
+            name: "",
+            description: "",
+            price: "",
+            manufacturer: '',
+            manufacturers: [],
+            category: '',
+            categories: []
+        };
+    },
+    computed: {
+      ...mapStores(useInstrumentStore),
+      allInstruments() {
+        return this.instrumentsStore.getInstruments;
+      },  
+    },
+    methods: {
+        
+    },
+    mounted() {
+        this.instrumentsStore.loadInstruments()
     }
 }
 </script>
+
 <style lang="scss">
     
 </style>
