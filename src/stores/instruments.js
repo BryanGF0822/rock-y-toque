@@ -72,7 +72,7 @@ export const useInstrumentStore = defineStore("instruments", {
             this.instructions = [...this.instruments, instrument]
             localStorage.setItem('instructions', JSON.stringify(this.instruments))
         },
-        loadInstrument() {
+        loadInstruments() {
             this.localStorageInstruments = JSON.parse(localStorage.getItem('instruments'))
         },
         getInstrumentsById(id) {
