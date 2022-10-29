@@ -1,4 +1,11 @@
 import {defineStore} from 'pinia';
+import { createClient } from '@supabase/supabase-js'
+
+const supabaseUrl = "https://opjmzhtjywbkohlvzgvj.supabase.co"
+const supabaseAnonKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im9wam16aHRqeXdia29obHZ6Z3ZqIiwicm9sZSI6ImFub24iLCJpYXQiOjE2NjcwNzM5NjEsImV4cCI6MTk4MjY0OTk2MX0.Lb4wGOYjFphQNtBG9GAWBB7HoTAi5mL3dzGR0gxbJww"
+
+export const supabase = createClient(supabaseUrl, supabaseAnonKey)
+
 export const useInstrumentStore = defineStore("instruments", {
     state : () => ({
         instruments: localStorage.getItem("instruments") ? JSON.parse(localStorage.getItem("instruments")) :[
@@ -61,16 +68,16 @@ export const useInstrumentStore = defineStore("instruments", {
                 manufacturers: ['Gibson', 'Fender', 'Jupiter', 'Mapex', 'Ibanez', 'Jackson', 'Pearl'],
                 category: '',
                 categories: ['Guitar', 'Drums', 'Bass', 'Piano', 'Studio']
-            },
+            },  
         ]
     }),
     getters: {
-        getInstruments: (state) => [...state.instructions],
+        getInstruments: (state) => [...state.instruments],
     },
     actions: {
         newInstrument(instrument) {
-            this.instructions = [...this.instruments, instrument]
-            localStorage.setItem('instructions', JSON.stringify(this.instruments))
+            this.instruments = [...this.instruments, instrument]
+            localStorage.setItem('instruments', JSON.stringify(this.instruments))
         },
         loadInstruments() {
             this.localStorageInstruments = JSON.parse(localStorage.getItem('instruments'))

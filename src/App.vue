@@ -35,8 +35,12 @@ export default {
           </div>
           <div class="offcanvas-body">
             <form class="d-flex" role="search">
-              <button class="btn btn-outline-success" type="submit">Sing In</button>
-              <button class="btn btn-outline-success" type="submit">Sing Up</button>
+              <button class="btn btn-outline-success" type="submit">
+                <RouterLink class="nav-link active" to="/singin"> Sing In </RouterLink>
+              </button>
+              <button class="btn btn-outline-success" type="submit">
+                <RouterLink class="nav-link active" to="/singup"> Sing Up</RouterLink>
+              </button>
             </form>
             <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
               <li class="nav-item">
@@ -93,6 +97,10 @@ header {
 nav {
   display: flex;
   justify-content: space-around;
+}
+
+.btn{
+  margin-right: 15px;
 }
 
 </style>

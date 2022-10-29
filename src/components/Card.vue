@@ -1,5 +1,5 @@
 <template>
-    <div class="card mb-3" style="max-width: 540px;" v-for="instrument in allInstruments" :key="instrument.name" :to="`/instrument/${instrument.name}`">
+    <div class="card mb-3" style="max-width: 540px;">
         <div class="row g-0">
             <div class="col-md-4">
                 <img :src="instrument.image" class="img-fluid rounded-start" :alt="instrument.name">
