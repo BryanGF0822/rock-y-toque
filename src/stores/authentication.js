@@ -4,10 +4,10 @@ import { auth } from "../firebase/config";
 
 export const useAuthenticationStore = defineStore("authentication", {
     state: () => ({
-        Auth: auth,
+        auth: auth,
     }),
     actions: {
-        singIn(email, password){
+        signIn(email, password){
             signInWithEmailAndPassword(auth, email, password)
                 .then((userCredential) => {
                     //Singed in
@@ -18,6 +18,7 @@ export const useAuthenticationStore = defineStore("authentication", {
                 .catch((error) => {
                     const errorCode = error.code;
                     const errorMessage = error.message;
+                    console.log(error);
                 })
         },
         newUser(email, password) {

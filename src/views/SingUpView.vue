@@ -45,7 +45,7 @@
               v-model = "confirmPassword"
             />
           </div>
-          <button @click="newUser" type="submit" class="btn btn-primary">Submit</button>
+          <button @click="newUser" type="submit" class="btn btn-primary">Register</button>
         </form>
         </div>
         <div class="col-3"></div>
@@ -54,36 +54,36 @@
 </template>
 
 <script>
-import {useAuthenticationStore} from '../stores/authentication';
-import { mapStores } from 'pinia';
+// import {useAuthenticationStore} from '../stores/authentication';
+// import { mapStores } from 'pinia';
 export default {
-  data(){
-      return {
-        email: '',
-        password: '',
-        confirmPassword: '',
-      }
-    },
-    methods:{
-      newUser(e){
-        e.preventDefault();
-        if(this.password === this.confirmPassword){
-            this.authenticationStore.newUser(this.email, this.password);
-        }else{
-            alert('Passwords no coinciden');
-        }
-      },
-      userExist(e){
-        e.preventDefault();
+  // data(){
+  //     return {
+  //       email: '',
+  //       password: '',
+  //       confirmPassword: '',
+  //     }
+  //   },
+  //   methods:{
+  //     newUser(e){
+  //       e.preventDefault();
+  //       if(this.password === this.confirmPassword){
+  //           this.authenticationStore.newUser(this.email, this.password);
+  //       }else{
+  //           alert('Passwords no coinciden');
+  //       }
+  //     },
+  //     userExist(e){
+  //       e.preventDefault();
         
-      }
-    },
-    computed:{
-      ...mapStores(useAuthenticationStore)
-    },
-    mounted() {
-        console.log(this.authenticationStore.auth.currentUser);
-    },
+  //     }
+  //   },
+  //   computed:{
+  //     ...mapStores(useAuthenticationStore)
+  //   },
+  //   mounted() {
+  //       console.log(this.authenticationStore.auth.currentUser);
+  //   },
 };
 </script>
 

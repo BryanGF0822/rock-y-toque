@@ -1,10 +1,11 @@
 import {defineStore} from 'pinia';
 import { createClient } from '@supabase/supabase-js'
 
-const supabaseUrl = "https://opjmzhtjywbkohlvzgvj.supabase.co"
-const supabaseAnonKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im9wam16aHRqeXdia29obHZ6Z3ZqIiwicm9sZSI6ImFub24iLCJpYXQiOjE2NjcwNzM5NjEsImV4cCI6MTk4MjY0OTk2MX0.Lb4wGOYjFphQNtBG9GAWBB7HoTAi5mL3dzGR0gxbJww"
+//SUPABASE
+// const supabaseUrl = "https://opjmzhtjywbkohlvzgvj.supabase.co"
+// const supabaseAnonKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im9wam16aHRqeXdia29obHZ6Z3ZqIiwicm9sZSI6ImFub24iLCJpYXQiOjE2NjcwNzM5NjEsImV4cCI6MTk4MjY0OTk2MX0.Lb4wGOYjFphQNtBG9GAWBB7HoTAi5mL3dzGR0gxbJww"
 
-export const supabase = createClient(supabaseUrl, supabaseAnonKey)
+// export const supabase = createClient(supabaseUrl, supabaseAnonKey)
 
 export const useInstrumentStore = defineStore("instruments", {
     state : () => ({

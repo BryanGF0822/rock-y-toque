@@ -35,10 +35,10 @@ export default {
           </div>
           <div class="offcanvas-body">
             <form class="d-flex" role="search">
-              <button class="btn btn-outline-success" type="submit">
+              <button class="btn btn-outline-success" type="">
                 <RouterLink class="nav-link active" to="/singin"> Sing In </RouterLink>
               </button>
-              <button class="btn btn-outline-success" type="submit">
+              <button class="btn btn-outline-success" type="">
                 <RouterLink class="nav-link active" to="/singup"> Sing Up</RouterLink>
               </button>
             </form>

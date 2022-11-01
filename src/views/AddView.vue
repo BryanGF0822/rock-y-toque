@@ -45,6 +45,7 @@
 </template>
 
 <script>
+
 import {generateId} from "../helpers/index";
 import { mapStores } from "pinia";
 import {useInstrumentStore} from "../stores/instruments"

@@ -1,58 +1,62 @@
 <template lang="">
-     <div class="container">
+  <div class="container">
     <div class="row">
       <div class="col-3"></div>
-        <div class="col-6">
-          <form>
-            <h1>Sing Up</h1>
+      <div class="col-6">
+        <form>
+          <h1>Sing In</h1>
           <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label"
-              >Email address</label
-            >
-            <input
-              type="email"
-              class="form-control"
-              id="exampleInputEmail1"
-              aria-describedby="emailHelp"
-            />
-            <div id="emailHelp" class="form-text">
-              We'll never share your email with anyone else.
-            </div>
+            <label for="Email" class="form-label">Email address</label>
+              <input
+                type="email"
+                class="form-control"
+                id="Email"
+                v-model = "email"
+              />
           </div>
           <div class="mb-3">
-            <label for="exampleInputPassword1" class="form-label"
-              >Password</label
-            >
-            <input
-              type="password"
-              class="form-control"
-              id="exampleInputPassword1"
-            />
+            <label for="Password1" class="form-label">Password</label>
+              <input
+                type="password"
+                class="form-control"
+                id="Password1"
+                v-model = "password"
+              />
           </div>
-          <div class="mb-3">
-            <label for="exampleInputPassword1" class="form-label"
-              >Confirm Password</label
-            >
-            <input
-              type="password"
-              class="form-control"
-              id="exampleInputPassword1"
-            />
-          </div>
-          <button type="submit" class="btn btn-primary">Submit</button>
+          <button @click="signIn" type="submit" class="btn btn-primary">Sing In</button>
         </form>
-        </div>
-        <div class="col-3"></div>
+      </div>
+      <div class="col-3"></div>
     </div>
   </div>
 </template>
 
 <script>
-export default {
-    
-}
+import { mapStores } from "pinia";
+import { useAuthenticationStore } from '../stores/authentication'
+
+  export default {
+    data() {
+      return {
+        email: '',
+        password: '',
+      }
+    },
+    methods: {
+      signIn(e) {
+        e.preventDefault()
+        this.authenticationStore.signIn(this.email, this.password)
+      }
+    },
+    computed: {
+      ...mapStores(useAuthenticationStore)
+    },
+    mounted() {
+      console.log(this.authenticationStore.auth)
+    }
+  };
 </script>
 
-<style lang="">
-    
+<style lang="scss">
+
 </style>
