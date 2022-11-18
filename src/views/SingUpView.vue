@@ -75,7 +75,6 @@ export default {
   //     },
   //     userExist(e){
   //       e.preventDefault();
-        
   //     }
   //   },
   //   computed:{
