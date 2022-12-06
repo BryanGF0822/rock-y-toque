@@ -6,12 +6,12 @@ import { getAuth, onAuthStateChanged } from "firebase/auth";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyB3OoNjl4lCp0NYnukXfq_HascAnHikSU0",
-  authDomain: "rock-y-toque.firebaseapp.com",
-  projectId: "rock-y-toque",
-  storageBucket: "rock-y-toque.appspot.com",
-  messagingSenderId: "6056383714",
-  appId: "1:6056383714:web:ac826204b3987069abfabb"
+  apiKey: "",
+  authDomain: "",
+  projectId: "",
+  storageBucket: "",
+  messagingSenderId: "",
+  appId: ""
 };
 
 // Initialize Firebase
