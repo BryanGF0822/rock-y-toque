@@ -6,6 +6,9 @@ export const useAuthenticationStore = defineStore("authentication", {
     state: () => ({
         auth: auth,
     }),
+    getters: () => ({
+        getAuth(){}
+    }),
     actions: {
         signIn(email, password){
             signInWithEmailAndPassword(auth, email, password)
@@ -18,7 +21,7 @@ export const useAuthenticationStore = defineStore("authentication", {
                 .catch((error) => {
                     const errorCode = error.code;
                     const errorMessage = error.message;
-                    console.log(error);
+                    alert(errorMessage);
                 })
         },
         newUser(email, password) {

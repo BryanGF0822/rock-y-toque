@@ -6,7 +6,7 @@
         <form>
           <h1>Sing In</h1>
           <div class="mb-3">
-            <label for="Email" class="form-label">Email address</label>
+            <label for="email" class="form-label">Email: </label>
               <input
                 type="email"
                 class="form-control"
@@ -15,7 +15,7 @@
               />
           </div>
           <div class="mb-3">
-            <label for="Password1" class="form-label">Password</label>
+            <label for="Password" class="form-label">Password: </label>
               <input
                 type="password"
                 class="form-control"
@@ -34,6 +34,7 @@
 <script>
 import { mapStores } from "pinia";
 import { useAuthenticationStore } from '../stores/authentication'
+import { auth } from "../firebase/config";
 
   export default {
     data() {

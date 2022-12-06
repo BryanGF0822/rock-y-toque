@@ -1,5 +1,5 @@
 import {defineStore} from 'pinia';
-import { createClient } from '@supabase/supabase-js'
+//import { createClient } from '@supabase/supabase-js'
 
 //SUPABASE
 // const supabaseUrl = "https://opjmzhtjywbkohlvzgvj.supabase.co"

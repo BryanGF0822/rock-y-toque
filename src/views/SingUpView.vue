@@ -22,7 +22,7 @@
             </div>
           </div>
           <div class="mb-3">
-            <label for="exampleInputPassword1" class="form-label"
+            <label for="password" class="form-label"
               >Password</label
             >
             <input
@@ -34,7 +34,7 @@
             />
           </div>
           <div class="mb-3">
-            <label for="exampleInputPassword1" class="form-label"
+            <label for="confirmPassword" class="form-label"
               >Confirm Password</label
             >
             <input
@@ -54,35 +54,35 @@
 </template>
 
 <script>
-// import {useAuthenticationStore} from '../stores/authentication';
-// import { mapStores } from 'pinia';
+import {useAuthenticationStore} from '../stores/authentication';
+import { mapStores } from 'pinia';
 export default {
-  // data(){
-  //     return {
-  //       email: '',
-  //       password: '',
-  //       confirmPassword: '',
-  //     }
-  //   },
-  //   methods:{
-  //     newUser(e){
-  //       e.preventDefault();
-  //       if(this.password === this.confirmPassword){
-  //           this.authenticationStore.newUser(this.email, this.password);
-  //       }else{
-  //           alert('Passwords no coinciden');
-  //       }
-  //     },
-  //     userExist(e){
-  //       e.preventDefault();
-  //     }
-  //   },
-  //   computed:{
-  //     ...mapStores(useAuthenticationStore)
-  //   },
-  //   mounted() {
-  //       console.log(this.authenticationStore.auth.currentUser);
-  //   },
+  data(){
+      return {
+        email: '',
+        password: '',
+        confirmPassword: '',
+      }
+    },
+    methods:{
+      newUser(e){
+        e.preventDefault();
+        if(this.password === this.confirmPassword){
+            this.authenticationStore.newUser(this.email, this.password);
+        }else{
+            alert('Passwords no coinciden');
+        }
+      },
+      userExist(e){
+        e.preventDefault();
+      }
+    },
+    computed:{
+      ...mapStores(useAuthenticationStore)
+    },
+    mounted() {
+        console.log(this.authenticationStore.auth.currentUser);
+    },
 };
 </script>
 
